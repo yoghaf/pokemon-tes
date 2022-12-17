@@ -1,4 +1,3 @@
-import { Background } from "../component/Others";
 const Login = () => {
   return (
     <div className="flex justify-center mt-20    ">

@@ -2,13 +2,13 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Chosen from "../component/Chosen";
-import { Background, Description, Image, Title } from "../component/Others";
+import { Description, Image, Title } from "../component/Others";
 
 const Location = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
 
-  const [loading, setLoading] = useState(false);
+  const [setLoading] = useState(false);
   const fetchData = async (id) => {
     const response = await fetch(`https://pokeapi.co/api/v2/location-area/${id}`);
     const data = await response.json();
@@ -37,7 +37,7 @@ const Location = () => {
   const imagepoke = localStorage.getItem("imagepokesatu");
   const namepoke = localStorage.getItem("namepokesatu");
   const [poke, setPoke] = useState(namepoke);
-  const [imagepokemon, setImagepokemon] = useState(imagepoke);
+  const [setImagepokemon] = useState(imagepoke);
 
   if (data.length <= 0) return <h1>Loading...</h1>;
   // console.log(data.pokemon_encounters);

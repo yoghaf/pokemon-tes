@@ -1,9 +1,8 @@
 import "./App.css";
-import { Routes, Route, useRoutes, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Page from "./Page/Homepage";
 import Navbar from "./component/Navbar";
 import Location from "./Page/Location";
-import Pagination from "./component/Pagination";
 import Login from "./Page/Login";
 import Battle from "./Page/Battle";
 
