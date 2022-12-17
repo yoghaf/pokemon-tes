@@ -8,7 +8,6 @@ const Location = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
 
-  const [setLoading] = useState(false);
   const fetchData = async (id) => {
     const response = await fetch(`https://pokeapi.co/api/v2/location-area/${id}`);
     const data = await response.json();
@@ -23,14 +22,10 @@ const Location = () => {
   };
 
   useEffect(() => {
-    setLoading(true);
-
     try {
       fetchData(id);
-      setLoading(false);
     } catch (error) {
       console.error(error);
-      setLoading(false);
     }
   }, [id]);
   console.log(data);
